@@ -1,12 +1,12 @@
 import 'package:conditional_builder/conditional_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 import 'package:untitled1/resturant_app/login_screen/login_screen.dart';
 import 'package:untitled1/resturant_app/register/cubit/cubit.dart';
 import 'package:untitled1/resturant_app/register/cubit/states.dart';
 import 'package:untitled1/shared/components/component.dart';
+import 'package:untitled1/shared/remote/colors/colors.dart';
 
 
 class SignupScreen extends StatelessWidget {
@@ -68,7 +68,7 @@ class SignupScreen extends StatelessWidget {
                                   text: 'login',
                                   background: Colors.white,
                                   elevation: 0.0,
-                                  textColors: HexColor("F23B3F"),
+                                  textColors: defaultColor,
                                 ),
                               ),
                               SizedBox(
@@ -78,7 +78,7 @@ class SignupScreen extends StatelessWidget {
                                 // الزورار انا مسبته ومستدعيه بتاع الريجستر ثابت في الكومبوننت
                                 child: defaultButton(
                                     width: 30,
-                                    background: HexColor("F23B3F"),
+                                    background: defaultColor,
                                     function: () {},
                                     text: 'signup',
                                     textColors: Colors.white),

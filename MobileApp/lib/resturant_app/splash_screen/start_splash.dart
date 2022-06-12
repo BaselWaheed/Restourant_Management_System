@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:lottie/lottie.dart';
 import 'package:untitled1/layout/categories_layout/kale_me_crazy/kalr_me_crazy.dart';
 import 'package:untitled1/shared/components/component.dart';
+import 'package:untitled1/shared/remote/colors/colors.dart';
 
 
 class StartScreen extends StatefulWidget {
@@ -27,7 +27,7 @@ class _StartScreenState extends State<StartScreen> {
   Widget build(BuildContext context) {
     //الديزاين
     return Scaffold(
-      backgroundColor: HexColor('#e3342f'),
+      backgroundColor: defaultColor,
       body:Center(child: Lottie.asset('assets/images/start.json',fit: BoxFit.cover,  ))
     );
   }

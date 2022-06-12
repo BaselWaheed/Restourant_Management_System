@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:untitled1/resturant_app/login_screen/login_screen.dart';
 import 'package:untitled1/shared/components/component.dart';
 import 'package:untitled1/shared/remote/cash_helper.dart';
+import 'package:untitled1/shared/remote/colors/colors.dart';
 //الموديل الي هشتغل عليه
 class BoardingModel {
   final String image;
@@ -65,7 +65,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           actions: [TextButton(onPressed: () {
             submit();
           }, child: Text('Skip',style: TextStyle(
-            color: HexColor("F23B3F"),)
+            color:defaultColor,)
           ),)],
         ),
         body: Container(
@@ -110,7 +110,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           dotWidth: 10,
                           spacing: 5,
                           expansionFactor: 3,
-                          activeDotColor: HexColor("F23B3F"),
+                          activeDotColor: defaultColor,
                         ),
                         count: boarding.length,
                       ),
@@ -119,7 +119,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       ),
                       //الزر الي بينقلنا للصور الاون بوردينج
                       FloatingActionButton(
-                        backgroundColor: HexColor("F23B3F"),
+                        backgroundColor: defaultColor,
                         onPressed: () {
                           if (islast) {
                             submit();

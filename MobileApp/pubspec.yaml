@@ -38,7 +38,6 @@ dependencies:
   dio: ^3.0.10
   shared_preferences: ^2.0.5
   smooth_page_indicator: ^0.2.3
-  hexcolor: ^1.0.5
   flutter_conditional_rendering: ^1.1.0
   lottie: ^0.7.0
   responsive_framework: ^0.0.15

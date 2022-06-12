@@ -2,7 +2,6 @@ import 'package:conditional_builder/conditional_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:untitled1/layout/categories_layout/categories_layout/cubit/cubit.dart';
 import 'package:untitled1/layout/categories_layout/kale_me_crazy/kalr_me_crazy.dart';
 import 'package:untitled1/resturant_app/forget_password/forget_password_screen.dart';
@@ -73,7 +72,7 @@ class LoginScreen extends StatelessWidget {
                               Expanded(
                                 // الزورار انا مسبته ومستدعيه بتاع اللوج ان ثابت في الكومبوننت
                                 child: defaultButton(
-                                    background: HexColor("F23B3F"),
+                                    background: defaultColor,
                                     function: () {},
                                     text: 'login',
                                     textColors: Colors.white),
@@ -95,7 +94,7 @@ class LoginScreen extends StatelessWidget {
                                   text: 'signup',
                                   elevation: 0.0,
                                   background: Colors.white,
-                                  textColors: HexColor("F23B3F"),
+                                  textColors: defaultColor,
                                 ),
                               )
                             ],
