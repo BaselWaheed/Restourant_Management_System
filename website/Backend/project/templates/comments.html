@@ -1,0 +1,53 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'admin:index' %}">{% trans 'Dashboord' %}</a></li>
+</ol>
+{% endblock %}
+
+{% block title %}{% trans 'Reviews' %}{% endblock %}
+
+
+{% block content %}
+
+<div id="content-main" class=col-12>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body pad table-responsive">
+          <h1> Reviews </h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content-main" class=col-12>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body pad table-responsive">
+        {% if comments %}
+          {% for i in comments %}
+            <h3> - {{i.comment}} </h3> 
+            <h5>    status : {{i.comm_sentiment}} </h5> 
+          {% endfor%}
+        {% else %}
+        <h3>No Reviews can manged </h3>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content-main" class=col-12>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body pad table-responsive">
+        <h3> total count of comments  : {{number_comment}}</h3>
+        <h3> Accepted comments  : {{comment_accept}}</h3>
+        <h3> Rejected comments  : {{comment_rejected}}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

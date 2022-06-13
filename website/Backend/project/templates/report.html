@@ -1,0 +1,174 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="tabels" content="tabels for begginer">
+		<title>Kale Me Crazy</title>
+		<link rel="" href="">
+		<script>                                        </script>
+		<style>
+			body{
+				text-align: center;
+			}
+			.header{
+				font-size:3rem;
+				padding-top:2rem;
+			}
+			span{
+				color: rgb(222 54 54);
+			}
+			.logo{
+				margin-bottom:-10px
+			}
+			.one{
+				text-align: center;
+				padding-top: 3rem;
+				padding-bottom: 3rem;
+			}
+			.table{
+				display: inline-block;
+				padding-right: 5rem;
+			}
+			.head {
+				color:rgb(222 54 54) ;
+				font-weight:bold;
+				font-size: large;
+				padding-bottom:0.5rem;
+			}
+			.left {
+				width: 20rem;
+				text-align:center;
+				font-size:medium;
+
+			}
+			.right {
+				width: 5rem;
+				text-align:center;
+				background-color: #EEE;
+				margin:5px;
+
+			}
+			.input{
+				width:4rem;
+				text-align:center;
+				border:none;
+				border-radius:5px;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<header class="header"><img src="{% static 'img/logo.png' %}" class="logo" alt="logo"> <span>K</span>ale <span>M</span>e <span>C</span>razy</header>
+<div class="one">
+	
+	<div class="table">
+		<table  border="1"width="250">
+			
+				<caption class="head">General</caption>
+				
+				<tr>
+					<td class="left">number of users</td>
+					<td class="right">{{users}}</td>
+					
+				</tr>
+				<tr>
+					<td class="left">number of men </td>
+					<td class="right">{{male}}</td>
+					
+				</tr>
+				<tr>
+					<td class="left">number of women</td>
+					<td class="right">{{female}}</td>
+					
+				</tr>
+				<tr>
+					<td class="left">positive Comments</td>
+					<td class="right">{{positive}}</td>
+					
+				</tr>
+				<tr>
+					<td class="left">Negative Comments</td>
+					<td class="right">{{negative}}</td>
+					
+				</tr>
+				
+		</table>
+	</div>
+
+	<div class="table">
+		<table  border="1"width="250">
+				
+			<caption class="head">Order details</caption>
+			
+			<tr>
+				<td class="left">number of dishes</td>
+				<td class="right">{{dish}}</td>
+				
+			</tr>
+			<tr>
+				<td class="left">number of order</td>
+				<td class="right">{{order}}</td>
+				
+			</tr>
+			<tr>
+				<td class="left">number of order online</td>
+				<td class="right">{{online}}</td>
+				
+			</tr>
+			<tr>
+				<td class="left">number of order offline</td>
+				<td class="right">{{offline}}</td>
+				
+			</tr>
+			<tr>
+				<td class="left">total_price</td>
+				<td class="right">{{total_price}}</td>
+				
+			</tr>
+			
+		</table>
+	</div>
+
+</div>
+
+<br/>
+
+	<div class="two">
+
+	<div class="table">
+		<table  border="1"width="250">
+			
+			<caption class="head">Top Meals</caption>
+			{% for key, value in result.items%}
+				<tr>
+					<td class="left">{{key}}</td>
+					<td class="right">{{value}}</td>
+			{% endfor %}
+				</tr>
+
+	
+		</table>
+	</div>
+	
+	<div class="table">
+		<table  border="1"width="250">
+				
+			<caption class="head">Top Favourite Meals</caption>
+			{% for key, value in dish_favourite.items%}
+				<tr>
+					<td class="left">{{key}}</td>
+					<td class="right">{{value}}</td>
+			{% endfor %}
+				</tr>
+
+			</tr>
+			
+		</table>
+	</div>
+
+	</div>
+	</body>
+	
+</html>
